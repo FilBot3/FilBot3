@@ -1,0 +1,218 @@
+% On Ubuntu, use to install
+%
+%     sudo apt install texlive-full texlive-latex-extra
+%
+% On Fedora, use to install
+%
+%     sudo dnf install texlive texlive-latex-extra
+%
+\documentclass{article}
+
+% Packages
+\usepackage{titlesec}
+\usepackage{titling} % Had to install texlive-titling
+\usepackage[margin=1.25in]{geometry}
+
+\geometry{
+  a4paper,
+  top=10mm,
+}
+
+% Author Information
+\title{R\'esum\'e}
+\author{Phillip Dudley}
+
+% Formatting
+\titleformat{\section}
+  {\bfseries\Large\lowercase}
+  {}
+  {0em}
+  {}[\titlerule]
+
+\titleformat{\subsection}
+  {\bfseries}
+  {\hspace{-.25in}$\bullet$}
+  {0em}
+  {}
+
+\titleformat{\subsubsection}[runin]
+  {\bfseries}
+  {}
+  {0em}
+  {}[:]
+
+\titlespacing{\subsubsection}
+  {.25em}
+  {0em}
+  {0em}
+
+% Here we're adjusting the maketitle section so that its customized to fit our
+% needs. Everything is centered and could probably be changed to be split so it
+% looks super pretty for a resume.
+\renewcommand{\maketitle}{
+  \begin{center}
+  {\huge\bfseries\theauthor}
+
+  \vspace{.25em}
+
+  102 NE Cresent St
+  \hfill
+  Phillip.A.Dudley3@gmail.com
+
+  Lee's Summit, Missouri 64086
+  \hfill
+  816-267-9411
+\end{center}
+}
+
+\begin{document}
+
+  \maketitle
+
+  \section{Work Experience}
+
+    \subsection{DevOps Engineer II {\hfill} October 2019 - Present}
+
+      \subsubsection{Blue Cross Blue Shield of Kansas City, Mo}
+
+        \begin{scriptsize}
+        \begin{itemize}
+
+          \item Create, manage, and deploy to 12 Azure Kubernetes Service
+            clusters using CI/CD.
+
+          \item Create, manage, and deploy to two OpenShift Container Platform
+            clusters using CI/CD.
+
+          \item Defined Software Development Life Cycle standards and processes
+            for interacting with contracted work forces.
+
+          \item Defined policies for working with Azure DevOps and Software
+            Development Life Cycle.
+
+          \item Assisted with the adoption of Azure Cloud Services.
+
+          \item Administered Azure DevOps as well as taught others how to use
+            the tool to automate code deployments and infrastructure.
+
+          \item Automated administrative tasks of Azure DevOps.
+
+          \item Work witih infrastrcture to build foundational skills in
+            Infrastructure as Code reducing repeated work as well as Git.
+
+          \item Work with security team to improve secrets management through
+            the use of CyberArk and Conjur.
+
+          \item Created and taught the fundamentals of containers and working
+            with Docker and Kubernetes as well as other container technologies.
+
+          \item Create pipelines to deploy cloud infrastructure for key
+            business inititives.
+
+        \end{itemize}
+        \end{scriptsize}
+
+    \subsection{Senior System Engineer {\hfill} February 2013 - October 2019}
+
+      \subsubsection{Cerner Corporation: Kansas City, Mo}
+
+        \begin{scriptsize}
+        \begin{itemize}
+
+          \item Used and Developed Chef Cookbooks and Ansible Playbooks for
+            automating deployment of infrastructure and applications, as well
+            as to remediate other issuse during operations.
+
+          \item Deployed and used Continuous Integration and Delivery
+            mechanisms like Jenkins, BuildBot and DroneCI to deliver software
+            andmanage operations of systems.
+
+          \item Performed network, systems and application monitoring using
+            Zabbix Enterprise Monitoring, as well as enhancing existing
+            monitoring through the use of script and API calls.
+
+          \item Utilized and deployed Splunk for log aggregation and as a time
+            series database for monitoring and historical trending of
+            application and system performance.
+
+          \item Managed and setup IBM WebSphere Business Process Manager.
+            Scripted deployments of web applications for developers.
+
+          \item Worked with Informatica PowerCenter Enterprise and with the
+            developers workign on it to save and edit connections via XML
+            configurations.
+
+        \end{itemize}
+        \end{scriptsize}
+
+  \section{Projects}
+
+    \subsection{Kubernetes}
+
+      \begin{scriptsize}
+        \begin{itemize}
+          \item Use Terraform and other automation techniques to deploy Kubernetes in Azure, on-premises, and locally.
+          \item Create slim, secure container images to deploy applications.
+        \end{itemize}
+      \end{scriptsize}
+
+    \subsection{Modernizing Infrastructure Practices}
+
+      \begin{scriptsize}
+        \begin{itemize}
+          \item Use tools like Ansible Core and Ansible Tower to manage infrastrcture lifecycles.
+          \item Remove the manual intervention of infrastrcture staff by teaching how automation works.
+        \end{itemize}
+      \end{scriptsize}
+
+    \subsection{Continuous Integration \& Continuous Delivery}
+    
+      \begin{scriptsize}
+        \begin{itemize}
+          \item Transition from manual deployments to automated by using Azure DevOps and Jennkins.
+          \item Moved from Classic UI Pipelines to YAML code-based Pipelines.
+        \end{itemize}
+      \end{scriptsize}
+
+  \section{Education}
+    \subsection{New Horizions Computer Learning: Azure Architect}
+
+      \begin{scriptsize}
+      \begin{itemize}
+
+          \item Azure Architect 300 \hfill March 2020
+
+          \item Azure Architect 301 \hfill April 2020
+
+      \end{itemize}
+      \end{scriptsize}
+
+    \subsection{Associate of Arts in Information Technology and Networking}
+      \begin{scriptsize}
+      University of Phoenix
+      \hfill
+      Graducated 2014
+      \end{scriptsize}
+
+  \section{Languages and Technologies}
+
+    \begin{scriptsize}
+    \begin{itemize}
+
+      \item Kubernetes, OpenShift, k3s, k0s, minikube, KinD
+
+      \item Python, Rust, Ruby, Golang, Java, C\#, Git, Bash, Maven
+
+      \item SQL, PostgreSQL, MariaDB, MySQL, Amazon AWS RDS, Hadoop HDFS
+
+      \item Jenkins, BuildBot, DroneCI, RunDeck, Concourse-CI, GoCD, Azure
+        DevOps
+
+      \item HashiCorp Vault, Terraform, Packer, Vagrant
+
+      \item Amazon AWS, Microsoft Azure, OpenStack, Docker, VMWare
+
+    \end{itemize}
+    \end{scriptsize}
+
+\end{document}
