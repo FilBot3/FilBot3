@@ -2,7 +2,8 @@
 
 podman run \
   --rm \
-  --mount "type=bind,src=$(pwd),dst=/workspace" \
-  --workdir "/workspace" \
+  --userns=keep-id \
+  --mount="type=bind,src=$(pwd),dst=/workspace,relabel=shared" \
+  --workdir="/workspace" \
   docker.io/texlive/texlive:latest \
-  xelatex Phillip_Dudley_Resume.tex
+  xelatex /workspace/Phillip_Dudley_Resume.tex
